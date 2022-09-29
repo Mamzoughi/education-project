@@ -1,0 +1,33 @@
+<div class="courses">
+    <div class="section_background parallax-window" data-parallax="scroll" data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+    <div class="container">
+        <div *ngIf="visibility"class="row">
+            <div class="col">
+                <div class="section_title_container text-center">
+                    <h2 class="section_title">Online Courses</h2>
+                    <form #searchForm="ngForm" (ngSubmit)="toSearch()" style="width:30%;margin-left:40%">
+
+                        <input class="form-control me-2 mt-4" type="text" placeholder="Name" [(ngModel)]="course.name" name="name">
+                        <input class="form-control me-2 mt-1" type="number" placeholder="Maximal Price" [(ngModel)]="course.price" name="price">
+                        
+                        <button class="btn btn-outline-info mt-2" type="submit">Search </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row courses_row">
+            
+            <!-- Course -->
+            <div class="col-lg-4 course_col" 
+            (newCourses)='update($event)' *ngFor="let course of courses">
+                <app-course [C]="course"></app-course>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="courses_button trans_200"><a routerLink="courses">view all courses</a></div>
+            </div>
+        </div>
+    </div>
+</div>

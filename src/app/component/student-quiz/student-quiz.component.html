@@ -1,0 +1,46 @@
+
+<div class="text-center">
+    <h4 *ngIf="quizTab.length==0" style="margin-top:15% ; color:crimson">You do not currently have a Quiz to pass</h4>
+    <!-- <div class="counter_background" style="background-image:url(assets/images/counter_background.jpg)"></div> -->
+    <form #testForm="ngForm" (ngSubmit)="check(quiz.courseId)"  *ngFor="let quiz of quizTab">
+        <div class="text-center " style="margin-top: 12%;">
+            <h1>Quiz {{quiz.courseName}}</h1>
+        </div>
+    <p>{{quiz.questionOne}}</p>
+    
+    <input type="radio" id="mc" name="answerOne" [(ngModel)]="test.answerOne"   value="1">{{quiz.answerOne}}<br>
+    <input type="radio" id="mc" name="answerOne" [(ngModel)]="test.answerOne"   value="2">{{quiz.answerTwo}}<br>
+    <input type="radio" id="mc" name="answerOne" [(ngModel)]="test.answerOne"   value="3">{{quiz.answerThree}}<br>
+
+    <p class="mt-5">{{quiz.questionTwo}} </p>
+
+    <input type="radio" id="mc" name="answerTwo" [(ngModel)]="test.answerTwo" value="1">{{quiz.answerFour}}<br>
+    <input type="radio" id="mc" name="answerTwo" [(ngModel)]="test.answerTwo"   value="2">{{quiz.answerFive}}<br>
+    <input type="radio" id="mc" name="answerTwo" [(ngModel)]="test.answerTwo"   value="3">{{quiz.answerSex}}<br>
+
+
+
+    <p class="mt-4 mb-2">{{quiz.questionTwo}}</p>
+
+    <input type="radio" id="mc" name="answerThree" [(ngModel)]="test.answerThree"   value="1">{{quiz.answerSeven}}<br>
+    <input type="radio" id="mc" name="answerThree" [(ngModel)]="test.answerThree"   value="2">{{quiz.answerHeight}}<br>
+    <input type="radio" id="mc" name="answerThree" [(ngModel)]="test.answerThree"   value="3">{{quiz.answerNine}}<br>
+
+    <input class="text-center" id="button" type="submit" value="I'm finished!" >
+    
+</form>
+<!-- <div class="card-footer pb-0 pt-3 " style="margin-left:35%">
+    <jw-pagination [pageSize]="1" [items]="quizTab" (changePage)="onChangePage($event)" ></jw-pagination>
+</div>  -->
+</div>
+
+<div class="text-center mb-5">
+    <div id="after_submit">
+    <p id="message"></p>
+<p id="number_correct"></p>
+</div>
+
+</div>
+
+
+

@@ -1,0 +1,29 @@
+<div class="counter" style="margin-top: 5%;">
+    <div class="counter_background" style="background-image:url(assets/images/counter_background.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4"></div>
+               <div class="col-lg-4">
+                <div class="counter_content">
+                    <h2 class="counter_title mb-3 text-center">{{title}}</h2>
+                 
+                    <form class="counter_form_content d-flex flex-column align-items-center justify-content-center" #courseForm="ngForm" (ngSubmit)="addOrEditCourse()">
+                  
+                        <input type="text" class="counter_input" placeholder="Name" [(ngModel)]="course.training" name="training"  >
+                        <input type="text" class="counter_input" placeholder="Trainer" [(ngModel)]="course.trainer" name="trainer"  >
+                        <input type="number" class="counter_input" placeholder="Price"  [(ngModel)]="course.price" name="price">
+                        <textarea class="counter_input counter_text_input" placeholder="Description" [(ngModel)]="course.description" name="description"></textarea>         
+                        <input type="text" class="counter_input" placeholder="Place" [(ngModel)]="course.studentNbr" name="studentNbr" >
+                        <input  type="file" #filePicker (change)="onImageSelected($event)" style="visibility: hidden;"  >
+                        <button type="button" class="btn  py-3 px-5" style="background:#6B979C" (click)="filePicker.click()">
+                            Add Photo
+                        </button>
+                        <!-- <img [src]="imagePreview"> -->
+                        <button type="submit" class="counter_form_button" style="background:#6B979C">{{button}}</button>
+                    </form>  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

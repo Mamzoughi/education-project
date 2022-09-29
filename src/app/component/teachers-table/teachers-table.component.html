@@ -1,0 +1,27 @@
+<table class="table text-center container">
+    <thead class="">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col">Specialitty</th>
+        <th scope="col">Actions</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tutor of tutors">
+        <th scope="row">{{tutor.id}}</th>
+        <td>{{tutor.name}}</td>
+        <td>{{tutor.speciality}}</td>
+        <td>
+          <button class="btn btn-info" (click)="toDisplay(tutor.id)">Display</button>
+          <button class="btn btn-warning ml-1 "(click)="deleteTeacher(tutor.id)">Delete</button>
+          <button class="btn btn-success  ml-1 "(click)=toUpdate(tutor.id)>Update</button>
+         
+          
+        </td>
+        
+      </tr>
+     
+    </tbody>
+  </table>

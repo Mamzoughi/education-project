@@ -1,0 +1,41 @@
+<table class="table text-center container" style="margin-top:15% ;">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Genre</th>
+        <th scope="col">Password</th>
+        <th scope="col">CIN</th>
+        <th scope="col">TEL</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userList">
+        <td>{{ user._id }}</td>
+        <td>{{ user.firstName }} {{ user.lastName }}</td>
+        <td>{{ user.email}} </td>
+        <td>{{ user.gender | genderDisplay}}</td>
+        <!-- genderpipe a revoir -->
+        <td>{{ user.password | criptage}} </td>
+        <!-- criptage pipe à revoir -->
+        <td>{{user.cin }}</td>
+        <td>{{user.tel}}</td>
+       
+  
+  
+        <td *ngIf="user.role!='Admin'">
+          <button class="btn "  style="background-color:#FFEDD0 ; color:grey;" (click)="toDisplay(user._id)">
+            Display
+          </button>
+         
+          <button class="btn  ml-1" style="background-color:#EACFB8;color:grey;" (click)="toUpdate(user._id)">
+            Update
+          </button>
+          <button class="btn  ml-1" style="background-color:#c6aa5d;color:grey;" (click)="deleteUser(user._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

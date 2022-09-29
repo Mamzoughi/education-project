@@ -1,0 +1,30 @@
+
+<div class="counter " style="margin-top: 0;">
+  
+  <div class="counter_background" style="background-image:url(assets/images/counter_background.jpg)"></div>
+  <div class="container">
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+          <div class="counter_content">
+              <h2 class="counter_title mt-5 mb-3 text-center">Welcome Back</h2>
+                    <form  name="form"#loginForm="ngForm" (ngSubmit)=" loginForm.form.valid && login()" class="counter_form_content d-flex flex-column align-items-center justify-content-center" >
+                        <div class="counter_form_title">Login</div>
+                        <input type="email" class="counter_input" [(ngModel)]="user.email" placeholder="Email" name="email" #email="ngModel" [ngClass]="{'is-invalid': loginForm.submitted && email.invalid }" required minlength="8"/>
+                        <div *ngIf="loginForm.submitted && email.invalid" class="invalid-feedback">
+                          <div *ngIf="email.errors.required">Cin  is 
+                         required</div>
+                         <div *ngIf="email.errors.minlength">Cin  is 
+                          required</div>
+                          </div>
+                         
+                        <input type="tel" class="counter_input" [(ngModel)]="user.password"placeholder="Password" name="password">
+
+                        <button type="submit" class="counter_form_button" style="background:#6B979C">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+

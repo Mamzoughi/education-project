@@ -1,0 +1,101 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "training": "Front-End",
+      "trainer": "Miss. Ana Taylor",
+      "studentNbr": 15,
+      "rating": 5,
+      "price": "350"
+    },
+    {
+      "id": "2",
+      "training": "Software",
+      "trainer": "Mr. Max Taylor",
+      "studentNbr": 25,
+      "rating": 5,
+      "price": "350"
+    },
+    {
+      "id": 3,
+      "training": "Full StacK Js",
+      "trainer": " Miss Susane Taylor",
+      "studentNbr": 10,
+      "rating": 5,
+      "price": "350"
+    },
+    {
+      "id": 4,
+      "training": "Software",
+      "trainer": "Mr. Max Taylor",
+      "studentNbr": 25,
+      "rating": 15,
+      "price": "350"
+    }
+  ],
+  "events": [
+    {
+      "id": "1",
+      "title": "Alternative data ",
+      "dateStart": "2022-06-06",
+      "dateEnd": "2022-06-17",
+      "location": "5 New York City",
+      "hour": "8.30 - 10.30",
+      "price": "100"
+    },
+    {
+      "id": "2",
+      "title": "Student Debt",
+      "dateStart": "2022-06-06",
+      "dateEnd": "2022-10-01",
+      "location": "25 Brooklyn City",
+      "hour": "11.30 - 13.30",
+      "price": "560"
+    },
+    {
+      "id": "3",
+      "title": "Repaying your student",
+      "dateStart": "2022-08-01",
+      "dateEnd": "2022-08-10",
+      "location": "25 Brooklyn City",
+      "hour": "8.30 - 10.30",
+      "price": "290"
+    },
+    {
+      "id": "4",
+      "title": "financial inclusion",
+      "dateStart": "2022-09-01",
+      "dateEnd": "2022-09-10",
+      "location": "5 New York City",
+      "hour": "11.30 - 13.30",
+      "price": "600"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "1",
+      "name": "Joane Stalone ",
+      "speciality": "Math & Phy"
+    },
+    {
+      "id": "2",
+      "name": "Susane Taylor ",
+      "speciality": "Web Developpement"
+    },
+    {
+      "id": "3",
+      "name": "Max Taylor ",
+      "speciality": "Web Developpement"
+    },
+    {
+      "id": "4",
+      "name": "Jhon Mac",
+      "speciality": "Mecanis"
+    },
+    {
+      "id": "5",
+      "name": "Ana Taylor",
+      "speciality": "Web Developpement"
+    }
+  ]
+}

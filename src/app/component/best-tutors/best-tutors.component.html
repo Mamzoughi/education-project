@@ -1,0 +1,50 @@
+<div class="team">
+    <div class="team_background parallax-window" data-parallax="scroll" data-image-src="assets/images/team_background.jpg" data-speed="0.8"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title_container text-center">
+                    <h2 class="section_title">The Best Tutors in Town</h2>
+                    <div class="section_subtitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="row team_row">
+
+            <!-- Team Item -->
+            <div class="col-lg-4 col-md-4 team_col" *ngFor="let tutor of tutors">
+                <app-tutor [T]="tutor"></app-tutor>
+            </div>
+
+        </div>
+        <div id="testimonials" class="testimonials">
+        <div class="container" >
+        <div class="section-title">
+            <h2>Testimonials</h2>
+            <p>What are they saying</p>
+          </div>
+      
+        <div class="row team_row">
+           
+            <!-- Team Item -->
+            <div class="col-lg-4 col-md-3 team_col" *ngFor="let comment of comments">
+
+                <div id="testimonials" class="testimonials " >
+                    <div class="container" >
+                      
+                      <div
+                        class="testimonials-slider swiper"
+                      
+                      ><div class="swiper swiper-init" data-swiper='{"speed":"400", "spaceBetween":"40"}'>
+                        <div class="swiper-wrapper">
+                <app-comment [C]="comment"></app-comment>
+            </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        </div>
+        </div>
+
+    </div>
+</div>
+

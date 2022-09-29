@@ -1,0 +1,32 @@
+<div id="testimonials" class="testimonials flex-auto " *ngFor=" let cmt of C.comment">
+  <div class="container" >
+    
+    <div
+      class="testimonials-slider swiper"
+    
+    ><div class="swiper swiper-init" data-swiper='{"speed":"400", "spaceBetween":"40"}'>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide ">
+          <div class="testimonial-wrap">
+            <div class="testimonial-item">
+              <!-- <div class="carousel-inner">
+                <div class="carousel-item active"> -->
+              <img [src]="C.img" class="testimonial-img" alt="" />
+              <h3>{{ C.firstName }} {{ C.lastName }}</h3>
+
+              <h4>Ceo &amp; Founder </h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left" ></i>
+                {{ cmt.content}}  
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+    </div> 
+ </div> 
+</div>

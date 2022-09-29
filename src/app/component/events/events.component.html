@@ -1,0 +1,37 @@
+<div class="events mt-5">
+    <div class="container"  >
+        <div   *ngIf="visible">
+        <div class="row" >
+            <div class="col">
+                <div class="section_title_container text-center">
+                    <h2 class="section_title">Upcoming events</h2>
+                    <div class="section_subtitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p></div>
+                </div>
+            </div>
+        </div>
+        <div >    
+        <!-- <form  #eventForm="ngForm" (ngSubmit)="eventSearch()">        
+            <div class="row">
+              <div class="col-5 "></div>
+              <div class="col-3 ">
+                <input type="text" class="form-control" placeholder=" Event Name" [(ngModel)]="event.name " name="name">
+                <!-- <input type="Date" class="form-control mt-1" placeholder=" Date" [(ngModel)]="event.date " name="date">   -->
+              <!-- </div>
+            </div>
+              <div class="row">
+                <div class="col-6 "></div>
+                <div class="col-3 ">
+              <button  class="btn btn-info mt-2"type="submit">Search</button>
+            </div>
+              </div>     
+          </form>  -->
+        </div> 
+    </div>
+        <div class="row events_row">
+            <!-- Event -->
+            <div class="col-lg-3 event_col" *ngFor="let event of events | filterEvents : startDate: endDate">
+                <app-event [E]="event"></app-event>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<div >
+  <span>
+
+  </span>
+
+
+  <h3 class="text-center" style="margin-top:11%;color: #0d5860;">{{courseName}}</h3>
+<table class="table text-center mt-2 " >
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col"*ngIf="visibility">Email</th>
+        <th scope="col"*ngIf="visibility">Genre</th>
+        <th scope="col" *ngIf="visibility">Speciality</th>
+        <th scope="col"*ngIf="visibility">CIN</th>
+        <th scope="col"*ngIf="visibility">TEL</th>
+        <th scope="col"*ngIf="!visibility">Note</th>
+        <th scope="col" *ngIf="!visibility">Score</th>
+        <th scope="col" *ngIf="!visibility">Score Quiz</th>
+        <th scope="col" *ngIf="visibility">Role</th>
+        <th scope="col" class="text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td *ngIf="visibility">{{ user._id }}</td>
+        <td *ngIf="!visibility">{{ user.userId }}</td>
+        <td>{{ user.firstName }} {{ user.lastName }}</td>
+        <td *ngIf="visibility">{{ user.email}} </td>
+        <td *ngIf="visibility">{{ user.gender | genderDisplay}}</td>
+        <!-- genderpipe a revoir -->
+        <td *ngIf="visibility">{{ user.speciality}} </td>
+        <!-- criptage pipe à revoir -->
+        <td *ngIf="visibility">{{user.cin }}</td>
+        <td *ngIf="visibility">{{user.tel}}</td>
+        <td  *ngIf="visibility">{{user.role}}</td>
+        <td *ngIf="!visibility">{{user.note}}</td>
+        <td *ngIf="!visibility">{{user.score}}</td>
+        <td *ngIf="!visibility">{{user.scoreTest}}</td>
+       
+        
+  
+  
+        <td *ngIf="user.role!='Admin'">
+          <!-- <button *ngIf="visibility" class="btn "style="background:#6B979C; color:white;"  (click)="toDisplay(user._id)" >
+            Display
+          </button> -->
+         
+          <button class="btn  ml-1" style="background:#6B979C; color:white;" (click)="toUpdate(user._id)">
+            {{button}}
+          </button>
+          <button *ngIf="visibility"  class="btn  ml-1" style="background:#6B979C; color:white;"  (click)="deleteUser(user._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

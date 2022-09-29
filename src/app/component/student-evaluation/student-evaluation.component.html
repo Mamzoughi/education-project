@@ -1,0 +1,34 @@
+
+<div class="counter " style="margin-top: 0;">
+  
+    <div class="counter_background" style="background-image:url(assets/images/counter_background.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div class="counter_content">
+                    <h2 class="counter_title mt-5 mb-3 text-center">Evaluation</h2>
+                    <form [formGroup]="evaluationForm"  class="counter_form_content d-flex flex-column align-items-center justify-content-center" >
+                        <input type="text" class="counter_input" formControlName="firstName" placeholder="First Name" >
+                       
+                        <input type="text" class="counter_input" formControlName="lastName" placeholder="Last Name" >
+            
+                        <input type="text" class="counter_input" formControlName="score" placeholder="Score" >
+                        <input type="text" class="counter_input" formControlName="note" placeholder="Note" >
+                        
+ 
+                        <button type="submit" class="counter_form_button" style="background:#6B979C" (click)="evaluation()">Confirm</button>
+                    </form>
+                    <!-- Milestones -->
+
+                    
+                </div>
+
+            </div>
+       
+
+    </div>
+    </div>
+</div>
+
+

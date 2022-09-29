@@ -1,0 +1,23 @@
+<div class="team_item">
+    <div class="team_image"><img [src]="T.img" alt=""></div>
+    <div class="team_body">
+        <div class="team_title"><a href="#">{{T.firstName }} {{ T.lastName }}</a></div>
+        <div class="team_subtitle">{{T.speciality}}</div>
+        <div class="social_list">
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+            </ul>
+            <button class="btn" style="background:#6B979C; color:white"(click)="addingComment()" >Leave Your opinion</button>
+            <form ##commentForm="ngForm" (ngSubmit)="giveOpinion(T._id)" *ngIf="button" style="margin-left:10%; margin-top:3%;">
+            
+            <input class="form-control me-2 " placeholder="Comment.." [(ngModel)]="comment.content" name="text">
+            <button class="btn btn-outline-info mt-2" >Send</button>
+            </form>
+        </div>
+    </div>
+   
+
+    
+</div>

@@ -1,0 +1,54 @@
+ <div class="row mb-5" style="margin-top:15% ;">
+
+    <div class="col-lg-2 mt-5 mt-lg-0"></div>
+    <div class="col-lg-8 mt-5 mt-lg-0">
+  
+  <form #quizForm="ngForm" (ngSubmit)="addQuiz()">
+    <div class="row">
+    <div class="col-md-2 form-group"></div>
+      <div class="col-md-6 form-group">
+      
+        <input type="text" [(ngModel)]="quiz.questionOne"  name="questionOne" class="form-control" id="question" placeholder= "Question">
+      </div>
+        <div class="col-md-3 form-group">
+        <input type="text" name="answerOne" [(ngModel)]="quiz.answerOne"  class="form-control"  placeholder= "Response 1">
+        <input type="text" name="answerTwo" [(ngModel)]="quiz.answerTwo" class="form-control"placeholder= "Response 2">
+        <input type="text" name="answerThree" [(ngModel)]="quiz.answerThree"class="form-control"  placeholder= "Response 3">
+        <input type="text" name="rightAnswerOne" [(ngModel)]="quiz.rightAnswerOne"class="form-control"  placeholder= "Right Answer Number ">
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 form-group"></div>
+          <div class="col-md-6 form-group">
+          
+            <input type="text" [(ngModel)]="quiz.questionTwo"  name="questionTwo" class="form-control" id="question" placeholder= "Question">
+          </div>
+            <div class="col-md-3 form-group">
+            <input type="text" name="answerFour" [(ngModel)]="quiz.answerFour"  class="form-control"  placeholder= "Response 1">
+            <input type="text" name="answerFive" [(ngModel)]="quiz.answerFive" class="form-control"placeholder= "Response 2">
+            <input type="text" name="answerSex" [(ngModel)]="quiz.answerSex"class="form-control"  placeholder= "Response 3">
+            <input type="text" name="rightAnswerTwo" [(ngModel)]="quiz.rightAnswerTwo"class="form-control"  placeholder= "Right Answer Number ">
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2 form-group"></div>
+              <div class="col-md-6 form-group">
+              
+                <input type="text" [(ngModel)]="quiz.questionThree"  name="questionThree" class="form-control" id="question" placeholder= "Question">
+              </div>
+                <div class="col-md-3 form-group">
+                <input type="text" name="answerSeven" [(ngModel)]="quiz.answerSeven"  class="form-control"  placeholder= "Response 1">
+                <input type="text" name="answerHeight" [(ngModel)]="quiz.answerHeight" class="form-control"placeholder= "Response 2">
+                <input type="text" name="answerNine" [(ngModel)]="quiz.answerNine"class="form-control"  placeholder= "Response 3">
+                <input type="text" name="rightAnswerThree" [(ngModel)]="quiz.rightAnswerThree"class="form-control"  placeholder= "Right Answer Number ">
+              </div>
+              </div>
+   
+    <div class="text-center"> 
+    <button class="btn" type="submit" style="background: #6B979C;
+    color: #fff; font-family: Poppins; margin-left:50%;" >Add Quiz</button>
+    </div>
+  </form>
+      
+    </div>
+  </div>

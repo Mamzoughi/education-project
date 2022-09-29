@@ -1,0 +1,30 @@
+<table class="table  text-center container ">
+    <thead >
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Title</th>
+        <th scope="col">Date</th>
+        <th scope="col">Place</th>
+        <th scope="col">Price</th>
+        <th scope="col">Actions</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let event of events | sort">
+        <th scope="row">{{event._id}}</th>
+        <td>{{event.eventName}}</td>
+        <td>{{event.eventDate | date }}</td>
+        <td>{{event.eventPlace}}</td>
+        <td>{{event.eventPrice}}</td>
+        <td>
+          <button class="btn" style="background:#6B979C; color:white;"  (click)="toDisplay(event._id)">Display</button>
+          
+          <button class="btn  ml-1" style="background:#6B979C; color:white;"  (click)="toUpdate(event._id)">Update</button>
+          <button class="btn  ml-1" style="background:#6B979C; color:white;"  (click)="deleteEvent(event._id)">Delete</button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+

@@ -1,0 +1,23 @@
+<div class="event event_left">
+    <div class="event_image"><img [src]="E.img"  alt=""></div>
+   
+    <div class="event_body d-flex flex-row align-items-start justify-content-start">
+        <div class="event_date">
+         
+        </div>
+        <div class="event_content">
+            <div class="event_title"><a href="#">{{E.eventName}}</a></div>
+            <div class="event_info_container">
+                <div class="event_info"><span>{{E.eventDate | date}}</span></div>
+                <div class="event_info"><i class="fa fa-map-marker" aria-hidden="true"></i><span>{{E.eventPlace}}</span></div><br>
+                <div class="event_info"><span [ngStyle]="{color: styling(E.price )}">{{E.eventPrice | currency}}</span></div>
+                
+                <div class="event_text">
+                    <p>{{E.eventDescription}}..</p>
+                </div>
+            </div><div>{{errorMsg}}</div>
+            <button *ngIf="button"class="btn btn-info ml-4" (click)="participateToEvent(E)">Click To paticipate</button>
+        </div>
+        
+    </div>
+</div>
